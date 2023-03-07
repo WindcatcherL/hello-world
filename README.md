@@ -1,5 +1,5 @@
 # hello-world
-My first repository
+my first repository
 ## 标题2
 ### 标题3
 #### 标题4
