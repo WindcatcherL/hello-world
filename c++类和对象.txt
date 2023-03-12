@@ -1,0 +1,30 @@
+1. 类的写法：
+	class liyan {}；
+
+2. 类中可以包含数据成员和函数成员，(public 和 private)
+	private:
+	string company;
+	long shares;
+	double share_val;
+	double total_val;
+	void set_tot() { total_val = shares * share_val}
+
+	public:
+	Stock();
+	void acquire(const std::string &co, long n, double pr);
+	void buy(long num, double price);
+	void show();
+
+3. 构造函数 Stock() 名称与类名一致，如果类外写具体的实现 Stock::Stock(){}
+那么它等价于默认构造函数(也就是说等于没写)
+这时声明对象时，Stock tmp; 或 Stock tmp = Stock(); 或(指针) Stock *tmp = new Stock();
+
+4. 构造函数有具体实现时，第一种没有形参，直接在函数中给数据成员赋值，声明对象和上面一致；
+第二种有形参，声明对象时要加上值，Stock tmp("none", 0, 0); 或 Stock tmp = Stock("none", 0, 0);
+或 Stock *tmp = Stock("none", 0, 0);
+
+5. 析构函数：正常的直接~Stock(){}  ;  如果是new 声明的对象，需要写 delete 相关语句
+
+6. Stock *tmp = stock1.topval(stock2)  ----  stock1和stock2比较大小(topval函数中用this指针指代stock1)
+
+7. 
